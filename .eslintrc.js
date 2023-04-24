@@ -1,20 +1,22 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    '@react-native-community',
+    '@react-native-community'
   ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react'],
   rules: {
     'prettier/prettier': ['error', { singleQuote: true }],
-  },
+    semi: ['error', 'always'],
+    'comma-dangle': ['error', 'never']
+  }
 };
