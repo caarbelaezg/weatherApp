@@ -7,7 +7,7 @@ import { styles } from './styles';
 const IconText = ({ iconName, iconColor, bodyText, bodyTextStyles }) => {
   const { container, textTheme } = styles;
   return (
-    <View sytle={container}>
+    <View style={container}>
       <Feather name={iconName} size={50} color={iconColor} />
       <Text style={[textTheme, bodyTextStyles]}>{bodyText}</Text>
     </View>

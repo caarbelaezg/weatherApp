@@ -30,7 +30,7 @@ const City = () => {
           <IconText
             iconName="user"
             iconColor="red"
-            bodyText="800"
+            bodyText="8000"
             bodyTextStyles={populationText}
           />
         </View>
