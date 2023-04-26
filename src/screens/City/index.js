@@ -4,7 +4,10 @@ import { SafeAreaView, View, Text, ImageBackground } from 'react-native';
 import { styles } from './styles';
 import IconText from '../../components/IconText';
 
-const City = () => {
+import moment from 'moment';
+
+const City = ({ weatherData }) => {
+  const { name, country, population, sunrise, sunset } = weatherData;
   const {
     container,
     imageLayout,
@@ -24,13 +27,13 @@ const City = () => {
         source={require('../../../assets/medellin.jpg')}
         style={imageLayout}
       >
-        <Text style={[cityText, cityName]}>Envigado</Text>
-        <Text style={[cityText, countryName]}>Colombia</Text>
+        <Text style={[cityText, cityName]}>{name}</Text>
+        <Text style={[cityText, countryName]}>{country}</Text>
         <View style={[rowLayout, populationWrapper]}>
           <IconText
             iconName="user"
             iconColor="red"
-            bodyText="8000"
+            bodyText={`Population: ${population}`}
             bodyTextStyles={populationText}
           />
         </View>
@@ -38,13 +41,13 @@ const City = () => {
           <IconText
             iconName="sunrise"
             iconColor="white"
-            bodyText="10:46:56 am"
+            bodyText={moment(sunrise).format('h:mm a')}
             bodyTextStyles={riseSetText}
           />
           <IconText
             iconName="sunset"
             iconColor="white"
-            bodyText="17:28:55 pm"
+            bodyText={moment(sunset).format('h:mm a')}
             bodyTextStyles={riseSetText}
           />
         </View>

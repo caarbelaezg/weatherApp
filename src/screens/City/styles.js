@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
     marginTop: StatusBar.currentHeight || 0
   },
   imageLayout: {
-    flex: 1
+    flex: 1,
+    opacity: 0.7
   },
   cityName: {
     fontSize: 40

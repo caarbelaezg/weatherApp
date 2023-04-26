@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     borderWidth: 5,
-    backgroundColor: 'pink'
+    backgroundColor: 'indianred'
   },
   temp: {
     fontSize: 20,
@@ -18,5 +18,8 @@ export const styles = StyleSheet.create({
   date: {
     color: 'white',
     fontSize: 15
+  },
+  dateTextWrapper: {
+    flexDirection: 'column'
   }
 });
